@@ -1,0 +1,31 @@
+.iam-in {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.iam-in-btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.iam-in-btn--joined {
+  background-color: #ffffff;
+  cursor: not-allowed;
+}
+
+.iam-in-msg {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #000000;
+}

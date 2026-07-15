@@ -1,0 +1,41 @@
+.my-meetups {
+  max-width: 600px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.my-meetups h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.meetups-list {
+  list-style: none;
+  padding: 0;
+}
+
+.meetup-item {
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.meetup-post {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.meetup-date {
+  font-size: 12px;
+  color: #000000;
+}
