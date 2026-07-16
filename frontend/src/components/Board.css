@@ -1,0 +1,30 @@
+.board {
+    max-width: 700px; 
+    margin: 24px auto; 
+    padding: 0 24 px; 
+}
+
+.board h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.post-card {
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.post-card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.post-card p {
+  font-size: 13px;
+  color: #333;
+}
