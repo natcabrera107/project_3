@@ -1,0 +1,49 @@
+.post-form {
+  max-width: 500px;
+  margin: 24px auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+/* wraps the whole <form> — flex column stacks each label/input vertically */
+
+.post-form h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.post-form label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+/* each <label> above its input */
+
+.post-form input,
+.post-form textarea {
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+/* groups input + textarea together since they need identical styling */
+
+.post-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+/* only textarea gets a taller default height and vertical resize handle */
+
+.post-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
