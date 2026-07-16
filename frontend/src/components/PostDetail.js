@@ -8,7 +8,7 @@ function PostDetail(props) {
     var postId = props.postId;
     var [postData, setPostData] = React.useState(null);
     var [comments, setComments] = React.useState([]);
-    var [commentText, setCommentText] React.useState('');
+    var [commentText, setCommentText] = React.useState('');
 
     React.useEffect(function() {
         if (!postId) return; 
@@ -53,7 +53,7 @@ function PostDetail(props) {
                 {comments.map(function(comment){
                     return (
                         <li key={comment._id} className="comment-item">
-                            <strong>{comment.authout</strong>: {comment.text}
+                            <strong>{comment.author}</strong>: {comment.text}
                         </li>
                     );
                 })}
