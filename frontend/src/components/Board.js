@@ -1,0 +1,36 @@
+import React from "reac";
+import { get } from '../utils/api.ks';
+import './Board.css';
+
+function Board(props) {
+    var [posts, setPosts] = React.useState([]);
+
+    React.useEffect(function() {
+        get('/api/posts').then(function(data) {
+            setPosts(data);
+        });
+    }, []);
+
+    return (
+        <div className="board">
+            <h2>Orbit Board</h2>
+            {posts.map(function(post) {
+                return (
+                <div 
+                key={post._id} 
+                className="post-card"
+                onClick={function() {
+                    props.onSelectPost(post._id);
+                }}
+                >
+                    <h3>{post.title}</h3>
+                    <p>{post.category} - {post.eventDate} at {post.eventTime}</p>
+                    </div>
+                );
+            })}
+        </div>
+    );
+}
+
+export default Board; 
+
