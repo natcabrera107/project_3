@@ -2,7 +2,7 @@ import React from 'react';
 import { get, post } from '../utils/api.js';
 import IAmIn from './IAmIn.js';
 import AttendeeList from './AttendeeList.js';
-import './Postdetail.css';
+import './PostDetail.css';
 
 function PostDetail(props) {
     var postId = props.postId;
@@ -14,7 +14,7 @@ function PostDetail(props) {
         if (!postId) return; 
 
         get('/api/posts/' + postId).then(function(data) {
-            setPost(data);
+            setPostData(data);
         });
 
         get('/api/posts/' + postId + '/comments').then(function(data) {
