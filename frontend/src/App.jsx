@@ -1,9 +1,9 @@
 import React from 'react';
-import Board from '/components/Board.js';
-import PostForm from './components/PostForm';
-import PostDetail from './components/PostDetail';
-import Login from './components/Login';
-import MyMeetups from './components/MyMeetups';
+import Board from './components/Board.js';
+import PostForm from './components/PostForm.js';
+import PostDetail from './components/PostDetail.js';
+import Login from './components/Login.js';
+import MyMeetups from './components/MyMeetups.js';
 import './App.css'; 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <button onClick={function() {setView('login')}}>Login</button>
       </nav>
 
-      {view == 'board' && <Board onselectPost={goToPost} />}
+      {view == 'board' && <Board onSelectPost={goToPost} />}
       {view == 'newpost' && <PostForm /> }
       {view == 'detail' && <PostDetail postId={selectedPostId} />}
       {view == 'meetups' && <MyMeetups /> }

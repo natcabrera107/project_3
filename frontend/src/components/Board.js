@@ -1,5 +1,5 @@
-import React from "reac";
-import { get } from '../utils/api.ks';
+import React from "react";
+import { get } from '../utils/api.js';
 import './Board.css';
 
 function Board(props) {

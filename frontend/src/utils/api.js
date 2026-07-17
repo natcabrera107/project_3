@@ -1,4 +1,11 @@
-var host_url = 'http://localhost:3000';
+var host_url;
+
+if (window.location.hostname === 'localhost') {
+  host_url = 'http://localhost:3000';
+}
+else {
+  host_url = 'placeholderURL';
+}
 
 function get(path) {
   return fetch(host_url + path).then(function(res) {

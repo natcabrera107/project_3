@@ -3,7 +3,7 @@ import { get } from '../utils/api.js';
 import './MyMeetups.css';
 
 function MyMeetups() {
-  var username = localStorage.getItem('username');
+  var username = props.username;
   var [meetups, setMeetups] = React.useState([]);
 
   React.useEffect(function() {
