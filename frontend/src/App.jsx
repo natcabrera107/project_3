@@ -1,9 +1,9 @@
 import React from 'react';
-import Board from './components/Board.js';
-import PostForm from './components/PostForm.js';
-import PostDetail from './components/PostDetail.js';
-import Login from './components/Login.js';
-import MyMeetups from './components/MyMeetups.js';
+import Board from './components/Board.jsx';
+import PostForm from './components/PostForm.jsx';
+import PostDetail from './components/PostDetail.jsx';
+import Login from './components/Login.jsx';
+import MyMeetups from './components/MyMeetups.jsx';
 import { get } from './utils/api.js';
 import './App.css';
 

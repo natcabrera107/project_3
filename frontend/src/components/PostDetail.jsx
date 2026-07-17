@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { get, post } from '../utils/api.js';
-import IAmIn from './IAmIn.js';
-import AttendeeList from './AttendeeList.js';
+import IAmIn from './IAmIn.jsx';
+import AttendeeList from './AttendeeList.jsx';
 import './PostDetail.css';
 
 function PostDetail(props) {
