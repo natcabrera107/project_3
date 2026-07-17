@@ -4,7 +4,7 @@ if (window.location.hostname === 'localhost') {
   host_url = 'http://localhost:3000';
 }
 else {
-  host_url = 'placeholderURL';
+  host_url = 'https://orbit-backend-5uvw.onrender.com';
 }
 
 function get(path) {
