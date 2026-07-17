@@ -3,20 +3,20 @@ import { post } from '../utils/api.js';
 import './PostForm.css';
 
 function PostForm(props) {
-    var [title, setTitle] = react.useState('');
-    var [description, setDescription] = React.useSatate('');
+    var [title, setTitle] = React.useState('');
+    var [description, setDescription] = React.useState('');
     var [category, setCategory] = React.useState('');
     var [eventDate, setEventDate] = React.useState('');
     var [eventTime, setEventTime] = React.useState('');
 
     function handleSubmit(e) {
-        e.preventdefault();
+        e.preventDefault();
 
 
     var newPost = {
         title: title, 
-        decription: description, 
-        categgory: category, 
+        description: description, 
+        category: category, 
         eventDate: eventDate, 
         eventTime: eventTime
     };
