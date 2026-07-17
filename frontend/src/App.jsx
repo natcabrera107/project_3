@@ -4,7 +4,6 @@ import PostForm from './components/PostForm.jsx';
 import PostDetail from './components/PostDetail.jsx';
 import Login from './components/Login.jsx';
 import MyMeetups from './components/MyMeetups.jsx';
-import { get } from './utils/api.js';
 import './App.css';
 
 function App() {

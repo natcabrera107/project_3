@@ -2,9 +2,9 @@ import React from 'react';
 import { get } from '../utils/api.js';
 import './MyMeetups.css';
 
-function MyMeetups() {
-  var username = props.username;
-  var [meetups, setMeetups] = React.useState([]);
+function MyMeetups(props) {
+    var username = props.username;
+    var [meetups, setMeetups] = React.useState([]);
 
   React.useEffect(function() {
     if (username === null || username === '') {
