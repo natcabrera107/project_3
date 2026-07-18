@@ -6,7 +6,7 @@ Nathalie Cabrera and Alex Perkins
 
 ## Class Link
 
-[CS5610 Web Development — Northeastern University, Roux Institute](https://your-class-link-here)
+[CS5610 Web Development — Northeastern University, Roux Institute](https://johnguerra.co/classes/webDevelopment_online_summer_2026/)
 
 ## Project Objective
 
