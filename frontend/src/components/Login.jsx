@@ -1,6 +1,8 @@
 import React from 'react';
 import { post } from '../utils/api.js';
 import './Login.css';
+import PropTypes from 'prop-types';
+
 
 function Login(props) {
   var [username, setUsername] = React.useState('');
@@ -100,5 +102,9 @@ function Login(props) {
     </div>
   );
 }
+
+Login.propTypes = {
+  onLogin: PropTypes.func,
+};
 
 export default Login;

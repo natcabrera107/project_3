@@ -1,6 +1,8 @@
 import React from 'react';
 import { post } from '../utils/api.js';
 import './PostForm.css';
+import PropTypes from 'prop-types';
+
 
 function PostForm(props) {
     var [title, setTitle] = React.useState('');
@@ -80,5 +82,9 @@ return (
         </form>
     );
 } 
+
+PostForm.PropTypes = {
+    onPostCreated: PropTypes.func,
+};
 
 export default PostForm; 

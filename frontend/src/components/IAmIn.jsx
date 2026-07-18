@@ -1,6 +1,8 @@
 import React from 'react';
 import { post } from '../utils/api.js';
 import './IAmIn.css';
+import PropTypes from 'prop-types';
+
 
 function IAmIn(props) {
   var postId = props.postId;
@@ -47,5 +49,10 @@ function IAmIn(props) {
     </div>
   );
 }
+
+IAmIn.PropTypes = {
+  postId: PropTypes.string,
+  username: PropTypes.string
+};
 
 export default IAmIn;
