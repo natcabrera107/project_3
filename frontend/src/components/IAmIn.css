@@ -12,20 +12,20 @@
   padding-right: 24px;
   font-size: 14px;
   font-weight: 600;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #6c63ff;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .iam-in-btn--joined {
-  background-color: #ffffff;
+  background-color: #b8b4ff;
   cursor: not-allowed;
 }
 
 .iam-in-msg {
   margin-top: 8px;
   font-size: 13px;
-  color: #000000;
+  color: #4a4a6a;
 }

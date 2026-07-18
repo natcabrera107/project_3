@@ -25,10 +25,11 @@
   padding-bottom: 6px;
   padding-left: 0;
   padding-right: 0;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #d0d4ff;
+  color: #4a4a6a;
 }
 
 .attendee-empty {
   font-size: 14px;
-  color: #000000;
+  color: #4a4a6a;
 }

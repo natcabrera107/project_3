@@ -2,6 +2,9 @@
   max-width: 400px;
   margin: 24px auto;
   padding: 0 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.12);
 }
 
 .login h2 {
@@ -24,7 +27,7 @@
 
 .login-input {
   padding: 8px;
-  border: 1px solid #000000;
+  border: 1px solid #d0d4ff;
   border-radius: 6px;
   font-size: 14px;
 }
@@ -32,8 +35,9 @@
 .login-btn {
   margin-top: 16px;
   padding: 10px;
-  background-color: #ffffff;
-  border: 1px solid #000000;
+  background-color: #6c63ff;
+  color: #ffffff;
+  border: 1px solid #1a1a2e;
   border-radius: 6px;
   font-size: 14px;
   font-weight: 600;
@@ -59,5 +63,5 @@
   text-decoration: underline;
   cursor: pointer;
   font-size: 13px;
-  color: #000000;
+  color: #6c63ff;
 }
