@@ -8,7 +8,7 @@ function IAmIn(props) {
   var [message, setMessage] = React.useState('');
 
   function handleClick() {
-    var username = props.username;
+    var username = localStorage.getItem('username');
 
     if (username === null || username === '') {
       setMessage('Please log in to join this meetup.');

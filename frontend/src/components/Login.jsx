@@ -27,6 +27,7 @@ function Login(props) {
           setMessage(data.message);
         }
         else {
+          localStorage.setItem('username', username);
           if (props.onLogin) {
             props.onLogin(username);
           }
@@ -36,6 +37,7 @@ function Login(props) {
     else {
       post('/api/auth/login', { username: username, password: password }).then(function(data) {
         if (data.message === 'Logged in') {
+          localStorage.setItem('username', username);
           if (props.onLogin) {
             props.onLogin(username);
           }
