@@ -12,6 +12,14 @@ Nathalie Cabrera and Alex Perkins
 
 Orbit is a full-stack web app that helps people turn shared interests into real plans. Users post an activity with a required date and time, others comment to discuss it, and anyone can click "I'm in" to join. It solves a common problem — loose plans made in group chats or on social media that fizzle out because there's no clear way to see who's actually committed.
 
+## Demo
+
+https://youtu.be/TAPi6jtuocw
+
+## Google Slides
+
+https://docs.google.com/presentation/d/1BZEdPJNKcdkM_RK4LiGAiDsWKhxW1PIBvS9okSnRxPI/edit?usp=sharing
+
 ## Screenshot
 
 ![Orbit screenshot](./screenshot.png)
