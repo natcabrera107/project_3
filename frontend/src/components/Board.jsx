@@ -1,6 +1,8 @@
 import React from "react";
 import { get } from '../utils/api.js';
 import './Board.css';
+import PropTypes from 'prop-types';
+
 
 function Board(props) {
     var [posts, setPosts] = React.useState([]);
@@ -31,6 +33,10 @@ function Board(props) {
         </div>
     );
 }
+
+Board.propTypes = {
+    onSelectPost: PropTypes.func.isRequired,
+};
 
 export default Board; 
 

@@ -3,6 +3,8 @@ import { get, post } from '../utils/api.js';
 import IAmIn from './IAmIn.jsx';
 import AttendeeList from './AttendeeList.jsx';
 import './PostDetail.css';
+import PropTypes from 'prop-types';
+
 
 function PostDetail(props) {
     var postId = props.postId;
@@ -72,5 +74,10 @@ function PostDetail(props) {
         </div>
     );
 }
+
+PostDetail.propTypes = {
+    postId: PropTypes.string, 
+    username: PropTypes.string,
+};
 
 export default PostDetail; 

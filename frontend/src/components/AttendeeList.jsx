@@ -1,6 +1,7 @@
 import React from 'react';
 import { get } from '../utils/api.js';
 import './AttendeeList.css';
+import PropTypes from 'prop-types';
 
 function AttendeeList(props) {
   var postId = props.postId;
@@ -38,5 +39,8 @@ function AttendeeList(props) {
     </div>
   );
 }
+AttendeeList.propTypes = {
+  propName: PropTypes.string,
+};
 
 export default AttendeeList;

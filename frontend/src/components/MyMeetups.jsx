@@ -1,6 +1,8 @@
 import React from 'react';
 import { get } from '../utils/api.js';
 import './MyMeetups.css';
+import PropTypes from 'prop-types';
+
 
 function MyMeetups(props) {
   var username = props.username;
@@ -63,5 +65,10 @@ function MyMeetups(props) {
     </div>
   );
 }
+
+MyMeetups.PropTypes = {
+  postId: PropTypes.string, 
+  username: PropTypes.string,
+};
 
 export default MyMeetups;
