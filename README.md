@@ -15,7 +15,7 @@ Orbit is a full-stack web app that helps people turn shared interests into real 
 ## Screenshot
 
 ![Orbit screenshot](./screenshot.png)
-![1k records in monog](./1krecords.png)
+![1k records in mongo](./1krecords.png)
 
 ## Instructions to Build
 
@@ -32,3 +32,23 @@ npm install
 ```
 
 Create a `.env` file in `backend/` with:
+MONGODB_URI=your_atlas_connection_string
+SESSION_SECRET=your_secret_key
+
+### Run the Backend
+
+```bash
+npm start
+```
+
+### Frontend Setup
+
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+### Deployment
+
+The app is deployed at: https://orbit-backend-5uvw.onrender.com/
