@@ -9,7 +9,7 @@ function IAmIn(props) {
   var [message, setMessage] = React.useState('');
 
   function handleClick() {
-    var username = localStorage.getItem('username');
+    var username = props.username;
 
     if (username === null || username === '') {
       setMessage('Please log in to join this meetup.');
@@ -49,7 +49,7 @@ function IAmIn(props) {
   );
 }
 
-IAmIn.PropTypes = {
+IAmIn.propTypes = {
   postId: PropTypes.string,
   username: PropTypes.string,
 };
