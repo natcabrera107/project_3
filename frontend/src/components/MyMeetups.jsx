@@ -73,8 +73,7 @@ function MyMeetups(props) {
   );
 }
 
-MyMeetups.PropTypes = {
-  postId: PropTypes.string,
+MyMeetups.propTypes = {
   username: PropTypes.string,
 };
 

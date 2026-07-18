@@ -43,7 +43,7 @@ function AttendeeList(props) {
   );
 }
 AttendeeList.propTypes = {
-  propName: PropTypes.string,
+  postId: PropTypes.string,
 };
 
 export default AttendeeList;
