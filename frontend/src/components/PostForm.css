@@ -24,7 +24,7 @@
 .post-form input,
 .post-form textarea {
   padding: 8px;
-  border: 1px solid #000000;
+  border: 1px solid #d0d4ff;
   border-radius: 6px;
   font-size: 14px;
   font-family: inherit;
@@ -40,7 +40,8 @@
 .post-form button {
   margin-top: 20px;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: #6c63ff;
+  color: #ffffff;
   border: 1px solid #000000;
   border-radius: 6px;
   font-size: 14px;

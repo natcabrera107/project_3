@@ -7,24 +7,26 @@ import PropTypes from 'prop-types';
 function IAmIn(props) {
   var postId = props.postId;
   var [joined, setJoined] = React.useState(false);
-  var [message, setMessage] = React.useState('');
+  var [message, setMessage] = React.useState("");
 
   function handleClick() {
-    var username = localStorage.getItem('username');
+    var username = localStorage.getItem("username");
 
-    if (username === null || username === '') {
-      setMessage('Please log in to join this meetup.');
+    if (username === null || username === "") {
+      setMessage("Please log in to join this meetup.");
       return;
     }
 
-    post('/api/meetups', { postId: postId, username: username }).then(function(data) {
-      if (data.message === 'Already joined') {
-        setMessage('You are already in this meetup.');
-      } else {
-        setJoined(true);
-        setMessage('You are in!');
-      }
-    });
+    post("/api/meetups", { postId: postId, username: username }).then(
+      function (data) {
+        if (data.message === "Already joined") {
+          setMessage("You are already in this meetup.");
+        } else {
+          setJoined(true);
+          setMessage("You are in!");
+        }
+      },
+    );
   }
 
   if (joined === true) {
@@ -43,9 +45,7 @@ function IAmIn(props) {
       <button className="iam-in-btn" onClick={handleClick}>
         I am in
       </button>
-      {message !== '' && (
-        <p className="iam-in-msg">{message}</p>
-      )}
+      {message !== "" && <p className="iam-in-msg">{message}</p>}
     </div>
   );
 }

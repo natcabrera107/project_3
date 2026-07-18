@@ -23,10 +23,11 @@
 
 .meetup-item {
   background: #ffffff;
-  border: 1px solid #000000;
+  border: 1px solid #d0d4ff;
   border-radius: 8px;
   padding: 14px;
   margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(108, 99, 255, 0.08);
 }
 
 .meetup-post {
@@ -37,5 +38,18 @@
 
 .meetup-date {
   font-size: 12px;
-  color: #000000;
+  color: #4a4a6a;
+}
+
+.meetup-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.meetup-event-date {
+  font-size: 13px;
+  color: #6c63ff;
+  margin-bottom: 4px;
 }
