@@ -25,7 +25,7 @@ function PostDetail(props) {
 
     function handleCommentSubmit(e) {
         e.preventDefault(); 
-        var username = localStorage.getItem('username');
+        var username = props.username;
 
         post('/api/posts/' + postId + '/comments', {
             text: commentText, 
