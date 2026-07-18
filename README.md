@@ -15,6 +15,7 @@ Orbit is a full-stack web app that helps people turn shared interests into real 
 ## Screenshot
 
 ![Orbit screenshot](./screenshot.png)
+![1k records in monog](./1krecords.png)
 
 ## Instructions to Build
 
