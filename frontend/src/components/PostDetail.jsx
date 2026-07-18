@@ -45,7 +45,7 @@ function PostDetail(props) {
             <p>{postData.category}</p>
             <p>{postData.description}</p>
 
-            <IAmIn postId={postId} username={props.username} /> // needs to pass username else posts not keeping track of user joining
+            <IAmIn postId={postId} username={props.username} />
             <AttendeeList postId={postId} /> 
 
             <h3>Comments</h3>
