@@ -3,33 +3,32 @@ import { post } from '../utils/api.js';
 import './Login.css';
 import PropTypes from 'prop-types';
 
-
 function Login(props) {
-  var [username, setUsername] = React.useState("");
-  var [password, setPassword] = React.useState("");
+  var [username, setUsername] = React.useState('');
+  var [password, setPassword] = React.useState('');
   var [isSignup, setIsSignup] = React.useState(false);
-  var [message, setMessage] = React.useState("");
+  var [message, setMessage] = React.useState('');
 
-  var modeText = "Log In";
-  var toggleText = "Need an account?";
-  var toggleBtnText = "Sign Up";
+  var modeText = 'Log In';
+  var toggleText = 'Need an account?';
+  var toggleBtnText = 'Sign Up';
 
   if (isSignup === true) {
-    modeText = "Sign Up";
-    toggleText = "Already have an account?";
-    toggleBtnText = "Log In";
+    modeText = 'Sign Up';
+    toggleText = 'Already have an account?';
+    toggleBtnText = 'Log In';
   }
 
   function handleSubmit(e) {
     e.preventDefault();
 
     if (isSignup === true) {
-      post("/api/auth/signup", { username: username, password: password }).then(
+      post('/api/auth/signup', { username: username, password: password }).then(
         function (data) {
-          if (data.message === "Username is already taken") {
+          if (data.message === 'Username is already taken') {
             setMessage(data.message);
           } else {
-            localStorage.setItem("username", username);
+            localStorage.setItem('username', username);
             if (props.onLogin) {
               props.onLogin(username);
             }
@@ -37,15 +36,15 @@ function Login(props) {
         },
       );
     } else {
-      post("/api/auth/login", { username: username, password: password }).then(
+      post('/api/auth/login', { username: username, password: password }).then(
         function (data) {
-          if (data.message === "Logged in") {
-            localStorage.setItem("username", username);
+          if (data.message === 'Logged in') {
+            localStorage.setItem('username', username);
             if (props.onLogin) {
               props.onLogin(username);
             }
           } else {
-            setMessage("Invalid username or password.");
+            setMessage('Invalid username or password.');
           }
         },
       );
@@ -58,7 +57,7 @@ function Login(props) {
     } else {
       setIsSignup(true);
     }
-    setMessage("");
+    setMessage('');
   }
 
   return (
@@ -93,7 +92,7 @@ function Login(props) {
         </button>
       </form>
 
-      {message !== "" && <p className="login-message">{message}</p>}
+      {message !== '' && <p className="login-message">{message}</p>}
 
       <p className="login-toggle">
         {toggleText}

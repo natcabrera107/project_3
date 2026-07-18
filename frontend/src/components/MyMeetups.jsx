@@ -3,7 +3,6 @@ import { get } from '../utils/api.js';
 import './MyMeetups.css';
 import PropTypes from 'prop-types';
 
-
 function MyMeetups(props) {
   var username = props.username;
   var [meetups, setMeetups] = React.useState([]);
@@ -11,14 +10,14 @@ function MyMeetups(props) {
 
   React.useEffect(
     function () {
-      if (username === null || username === "") {
+      if (username === null || username === '') {
         return;
       }
-      get("/api/meetups?username=" + username).then(function (data) {
+      get('/api/meetups?username=' + username).then(function (data) {
         setMeetups(data);
         for (var i = 0; i < data.length; i++) {
           var meetup = data[i];
-          get("/api/posts/" + meetup.postId).then(function (postData) {
+          get('/api/posts/' + meetup.postId).then(function (postData) {
             setPosts(function (prev) {
               var updated = Object.assign({}, prev);
               updated[postData._id] = postData;
@@ -31,7 +30,7 @@ function MyMeetups(props) {
     [username],
   );
 
-  if (username === null || username === "") {
+  if (username === null || username === '') {
     return (
       <div className="my-meetups">
         <p>Please log in to see your meetups.</p>
@@ -59,7 +58,7 @@ function MyMeetups(props) {
               )}
               {posts[meetup.postId] && (
                 <p className="meetup-event-date">
-                  {posts[meetup.postId].eventDate} at{" "}
+                  {posts[meetup.postId].eventDate} at{' '}
                   {posts[meetup.postId].eventTime}
                 </p>
               )}
@@ -75,7 +74,7 @@ function MyMeetups(props) {
 }
 
 MyMeetups.PropTypes = {
-  postId: PropTypes.string, 
+  postId: PropTypes.string,
   username: PropTypes.string,
 };
 

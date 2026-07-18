@@ -1,9 +1,9 @@
 var host_url;
 
-if (window.location.hostname === "localhost") {
-  host_url = "http://localhost:3000";
+if (window.location.hostname === 'localhost') {
+  host_url = 'http://localhost:3000';
 } else {
-  host_url = "https://orbit-backend-5uvw.onrender.com";
+  host_url = 'https://orbit-backend-5uvw.onrender.com';
 }
 
 function get(path) {
@@ -14,8 +14,8 @@ function get(path) {
 
 function post(path, body) {
   return fetch(host_url + path, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   }).then(function (res) {
     return res.json();
@@ -24,7 +24,7 @@ function post(path, body) {
 
 function del(path) {
   return fetch(host_url + path, {
-    method: "DELETE",
+    method: 'DELETE',
   }).then(function (res) {
     return res.json();
   });

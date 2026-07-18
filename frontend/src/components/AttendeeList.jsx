@@ -9,10 +9,10 @@ function AttendeeList(props) {
 
   React.useEffect(
     function () {
-      if (postId === null || postId === "") {
+      if (postId === null || postId === '') {
         return;
       }
-      get("/api/meetups?postId=" + postId).then(function (data) {
+      get('/api/meetups?postId=' + postId).then(function (data) {
         setAttendees(data);
       });
     },

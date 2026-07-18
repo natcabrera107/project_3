@@ -1,26 +1,25 @@
-import React from 'react'; 
+import React from 'react';
 import { get, post } from '../utils/api.js';
 import IAmIn from './IAmIn.jsx';
 import AttendeeList from './AttendeeList.jsx';
 import './PostDetail.css';
 import PropTypes from 'prop-types';
 
-
 function PostDetail(props) {
   var postId = props.postId;
   var [postData, setPostData] = React.useState(null);
   var [comments, setComments] = React.useState([]);
-  var [commentText, setCommentText] = React.useState("");
+  var [commentText, setCommentText] = React.useState('');
 
   React.useEffect(
     function () {
       if (!postId) return;
 
-      get("/api/posts/" + postId).then(function (data) {
+      get('/api/posts/' + postId).then(function (data) {
         setPostData(data);
       });
 
-      get("/api/posts/" + postId + "/comments").then(function (data) {
+      get('/api/posts/' + postId + '/comments').then(function (data) {
         setComments(data);
       });
     },
@@ -31,12 +30,12 @@ function PostDetail(props) {
     e.preventDefault();
     var username = props.username;
 
-    post("/api/posts/" + postId + "/comments", {
+    post('/api/posts/' + postId + '/comments', {
       text: commentText,
       author: username,
     }).then(function (newComment) {
       setComments(comments.concat([newComment]));
-      setCommentText("");
+      setCommentText('');
     });
   }
   if (!postData) {
@@ -80,8 +79,8 @@ function PostDetail(props) {
 }
 
 PostDetail.propTypes = {
-    postId: PropTypes.string, 
-    username: PropTypes.string,
+  postId: PropTypes.string,
+  username: PropTypes.string,
 };
 
 export default PostDetail;

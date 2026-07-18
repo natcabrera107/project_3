@@ -1,14 +1,13 @@
-import React from "react";
+import React from 'react';
 import { get } from '../utils/api.js';
 import './Board.css';
 import PropTypes from 'prop-types';
-
 
 function Board(props) {
   var [posts, setPosts] = React.useState([]);
 
   React.useEffect(function () {
-    get("/api/posts").then(function (data) {
+    get('/api/posts').then(function (data) {
       setPosts(data);
     });
   }, []);
@@ -37,7 +36,7 @@ function Board(props) {
 }
 
 Board.propTypes = {
-    onSelectPost: PropTypes.func.isRequired,
+  onSelectPost: PropTypes.func.isRequired,
 };
 
 export default Board;
