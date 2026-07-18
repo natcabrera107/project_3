@@ -25,7 +25,7 @@ function PostDetail(props) {
 
     function handleCommentSubmit(e) {
         e.preventDefault(); 
-        var username = localStorage.getItem('username');
+        var username = props.username;
 
         post('/api/posts/' + postId + '/comments', {
             text: commentText, 
@@ -45,7 +45,7 @@ function PostDetail(props) {
             <p>{postData.category}</p>
             <p>{postData.description}</p>
 
-            <IAmIn postId={postId} />
+            <IAmIn postId={postId} username={props.username} /> // needs to pass username else posts not keeping track of user joining
             <AttendeeList postId={postId} /> 
 
             <h3>Comments</h3>
