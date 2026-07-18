@@ -7,7 +7,10 @@ const router = express.Router();
 // get all comments for a post
 router.get("/api/posts/:postId/comments", async (req, res) => {
   const db = getDB();
-  const comments = await db.collection("comments").find({ postId: req.params.postId }).toArray();
+  const comments = await db
+    .collection("comments")
+    .find({ postId: req.params.postId })
+    .toArray();
   res.json(comments);
 });
 
@@ -28,7 +31,9 @@ router.post("/api/posts/:postId/comments", async (req, res) => {
 // deleting a comment
 router.delete("/api/comments/:id", async (req, res) => {
   const db = getDB();
-  await db.collection("comments").deleteOne({ _id: new ObjectId(req.params.id) });
+  await db
+    .collection("comments")
+    .deleteOne({ _id: new ObjectId(req.params.id) });
   res.json({ message: "Comment deleted" });
 });
 
