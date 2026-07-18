@@ -3,8 +3,9 @@ import { get } from '../utils/api.js';
 import './MyMeetups.css';
 
 function MyMeetups(props) {
-    var username = props.username;
-    var [meetups, setMeetups] = React.useState([]);
+  var username = props.username;
+  var [meetups, setMeetups] = React.useState([]);
+  var [posts, setPosts] = React.useState({});
 
   React.useEffect(function() {
     if (username === null || username === '') {
@@ -12,6 +13,16 @@ function MyMeetups(props) {
     }
     get('/api/meetups?username=' + username).then(function(data) {
       setMeetups(data);
+      for (var i = 0; i < data.length; i++) {
+        var meetup = data[i];
+        get('/api/posts/' + meetup.postId).then(function(postData) {
+          setPosts(function(prev) {
+            var updated = Object.assign({}, prev);
+            updated[postData._id] = postData;
+            return updated;
+          });
+        });
+      }
     });
   }, [username]);
 
@@ -38,7 +49,12 @@ function MyMeetups(props) {
         {meetups.map(function(meetup) {
           return (
             <li key={meetup._id} className="meetup-item">
-              <p className="meetup-post">Post: {meetup.postId}</p>
+              {posts[meetup.postId] && (
+                <p className="meetup-title">{posts[meetup.postId].title}</p>
+              )}
+              {posts[meetup.postId] && (
+                <p className="meetup-event-date">{posts[meetup.postId].eventDate} at {posts[meetup.postId].eventTime}</p>
+              )}
               <p className="meetup-date">Joined: {new Date(meetup.joinedAt).toLocaleDateString()}</p>
             </li>
           );
