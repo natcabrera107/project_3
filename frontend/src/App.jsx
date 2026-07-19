@@ -54,6 +54,8 @@ function App() {
         </button>
       </nav>
 
+      {/* Authentication feedback is missing. After logging in, there is no success message or indication that the user is authenticated (e.g., displaying the username). Adding a login success alert/toast and a visible Logout button would significantly improve the user experience and make the authentication state clear. */}
+
       {view == 'board' && <Board onSelectPost={goToPost} />}
       {view == 'newpost' && <PostForm />}
       {view == 'detail' && (
