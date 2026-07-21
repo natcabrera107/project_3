@@ -1,5 +1,7 @@
 # Orbit
 
+Peer Review by Melissa - Hi Nat! Awesome job on this project, I thought this idea was very creative and addresses an issue many of us have experienced. You did a great job on utilizing React components and implementing authorization. If you were to continue this project in the future, I would say it would be helpful to make sure you have to be logged in in order to create a post. Also, I would make the titles for Login/Sign-in darker so its easier to see. The app name/logo at the top would be a nice touch too! 
+
 ## Author
 
 Nathalie Cabrera and Alex Perkins
