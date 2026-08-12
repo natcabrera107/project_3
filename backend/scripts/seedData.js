@@ -177,15 +177,15 @@ async function seed() {
 
     users.push({ username: uname, password: "password123" });
   }
-  var userResult = await db.collection("users").insertMany(users);
-  var usernames = users.map(function (u) {
+await db.collection("users").insertMany(users);
+var usernames = users.map(function (u) {
     return u.username;
   });
 
   // ---- posts: 200 ----
   console.log("Seeding posts...");
   var posts = [];
-  for (var i = 0; i < 200; i++) {
+  for (let i = 0; i < 200; i++) {
     posts.push({
       title: randomItem(titleWords),
       description: randomItem(descriptions),
@@ -201,7 +201,7 @@ async function seed() {
   // ---- comments: 550 ----
   console.log("Seeding comments...");
   var comments = [];
-  for (var i = 0; i < 550; i++) {
+  for (let i = 0; i < 550; i++) {
     comments.push({
       postId: randomItem(postIds),
       username: randomItem(usernames),

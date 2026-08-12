@@ -1,6 +1,6 @@
 import React from 'react';
 import { post } from '../utils/api.js';
-import './PostForm.css';
+import styles from "./PostForm.module.css";
 import PropTypes from 'prop-types';
 
 function PostForm(props) {
@@ -35,8 +35,7 @@ function PostForm(props) {
   }
 
   return (
-    <form className="post-form" onSubmit={handleSubmit}>
-      <h2>New Post</h2>
+    <form className={styles.postForm} onSubmit={handleSubmit}>
 
       <label>Title</label>
       <input
@@ -91,7 +90,7 @@ function PostForm(props) {
   );
 }
 
-PostForm.PropTypes = {
+PostForm.propTypes = {
   onPostCreated: PropTypes.func,
 };
 

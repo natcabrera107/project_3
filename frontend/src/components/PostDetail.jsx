@@ -2,7 +2,7 @@ import React from 'react';
 import { get, post } from '../utils/api.js';
 import IAmIn from './IAmIn.jsx';
 import AttendeeList from './AttendeeList.jsx';
-import './PostDetail.css';
+import styles from './PostDetail.module.css';
 import PropTypes from 'prop-types';
 
 function PostDetail(props) {
@@ -43,7 +43,7 @@ function PostDetail(props) {
   }
 
   return (
-    <div className="post-detail">
+    <div className={styles.postDetail}>
       <h2>{postData.title}</h2>
       <p>{postData.category}</p>
       <p>{postData.description}</p>
@@ -52,17 +52,17 @@ function PostDetail(props) {
       <AttendeeList postId={postId} />
 
       <h3>Comments</h3>
-      <ul className="comment-list">
+      <ul className={styles.commentList}>
         {comments.map(function (comment) {
           return (
-            <li key={comment._id} className="comment-item">
+            <li key={comment._id} className={styles.commentItem}>
               <strong>{comment.author}</strong>: {comment.text}
             </li>
           );
         })}
       </ul>
 
-      <form onSubmit={handleCommentSubmit} className="comment-form">
+      <form onSubmit={handleCommentSubmit} className={styles.commentForm}>
         <input
           type="text"
           value={commentText}

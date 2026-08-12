@@ -1,6 +1,6 @@
 import React from 'react';
 import { post } from '../utils/api.js';
-import './Login.css';
+import styles from './Login.module.css';
 import PropTypes from 'prop-types';
 
 function Login(props) {
@@ -61,14 +61,14 @@ function Login(props) {
   }
 
   return (
-    <div className="login">
+    <div className={styles.login}>
       <h2>{modeText}</h2>
 
-      <form onSubmit={handleSubmit} className="login-form">
-        <label className="login-label">Username</label>
+      <form onSubmit={handleSubmit} className={styles.loginForm}>
+        <label className={styles.loginLabel}>Username</label>
         <input
           type="text"
-          className="login-input"
+          className={styles.loginInput}
           value={username}
           onChange={function (e) {
             setUsername(e.target.value);
@@ -76,10 +76,10 @@ function Login(props) {
           required
         />
 
-        <label className="login-label">Password</label>
+        <label className={styles.loginLabel}>Password</label>
         <input
           type="password"
-          className="login-input"
+          className={styles.loginInput}
           value={password}
           onChange={function (e) {
             setPassword(e.target.value);
@@ -87,16 +87,16 @@ function Login(props) {
           required
         />
 
-        <button type="submit" className="login-btn">
+        <button type="submit" className={styles.loginBtn}>
           {modeText}
         </button>
       </form>
 
-      {message !== '' && <p className="login-message">{message}</p>}
+      {message !== '' && <p className={styles.loginMessage}>{message}</p>}
 
-      <p className="login-toggle">
+      <p className={styles.loginToggle}>
         {toggleText}
-        <button className="login-toggle-btn" onClick={toggleMode}>
+        <button className={styles.loginToggleBtn} onClick={toggleMode}>
           {toggleBtnText}
         </button>
       </p>

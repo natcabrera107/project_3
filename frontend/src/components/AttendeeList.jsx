@@ -1,6 +1,6 @@
 import React from 'react';
 import { get } from '../utils/api.js';
-import './AttendeeList.css';
+import styles from './AttendeeList.module.css';
 import PropTypes from 'prop-types';
 
 function AttendeeList(props) {
@@ -21,19 +21,19 @@ function AttendeeList(props) {
 
   if (attendees.length === 0) {
     return (
-      <div className="attendee-list">
-        <p className="attendee-empty">No one has joined yet. Be the first!</p>
+      <div className={styles.attendeeList}>
+        <p className={styles.attendeeEmpty}>No one has joined yet. Be the first!</p>
       </div>
     );
   }
 
   return (
-    <div className="attendee-list">
-      <h3 className="attendee-title">Who is going</h3>
-      <ul className="attendee-ul">
+    <div className={styles.attendeeList}>
+      <h3 className={styles.attendeeTitle}>Who is going</h3>
+      <ul className={styles.attendeeUl}>
         {attendees.map(function (attendee) {
           return (
-            <li key={attendee._id} className="attendee-item">
+            <li key={attendee._id} className={styles.attendeeItem}>
               {attendee.username}
             </li>
           );

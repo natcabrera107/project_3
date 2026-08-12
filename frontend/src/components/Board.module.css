@@ -1,7 +1,7 @@
 .board {
   max-width: 700px;
   margin: 24px auto;
-  padding: 0 24 px;
+  padding: 0 24px; /* was "0 24 px" — the stray space made this invalid CSS, so it was being ignored */
 }
 
 .board h2 {
@@ -11,6 +11,12 @@
 }
 
 .post-card {
+  /* reset default button styling so it looks like the old div did */
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+
   background: #ffffff;
   border: 1px solid #d0d4ff;
   border-radius: 8px;
@@ -23,6 +29,11 @@
 .post-card:hover {
   border-color: #6c63ff;
   box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+}
+
+.post-card:focus-visible {
+  outline: 2px solid #6c63ff;
+  outline-offset: 2px;
 }
 
 .post-card h3 {

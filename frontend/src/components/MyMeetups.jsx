@@ -1,6 +1,6 @@
 import React from 'react';
 import { get } from '../utils/api.js';
-import './MyMeetups.css';
+import styles from './MyMeetups.module.css';
 import PropTypes from 'prop-types';
 
 function MyMeetups(props) {
@@ -32,7 +32,7 @@ function MyMeetups(props) {
 
   if (username === null || username === '') {
     return (
-      <div className="my-meetups">
+      <div className={styles.myMeetups}>
         <p>Please log in to see your meetups.</p>
       </div>
     );
@@ -40,29 +40,29 @@ function MyMeetups(props) {
 
   if (meetups.length === 0) {
     return (
-      <div className="my-meetups">
+      <div className={styles.myMeetups}>
         <p>You have not joined any meetups yet.</p>
       </div>
     );
   }
 
   return (
-    <div className="my-meetups">
+    <div className={styles.myMeetups}>
       <h2>My Meetups</h2>
-      <ul className="meetups-list">
+      <ul className={styles.meetupsList}>
         {meetups.map(function (meetup) {
           return (
-            <li key={meetup._id} className="meetup-item">
+            <li key={meetup._id} className={styles.meetupItem}>
               {posts[meetup.postId] && (
-                <p className="meetup-title">{posts[meetup.postId].title}</p>
+                <p className={styles.meetupTitle}>{posts[meetup.postId].title}</p>
               )}
               {posts[meetup.postId] && (
-                <p className="meetup-event-date">
+                <p className={styles.meetupEventDate}>
                   {posts[meetup.postId].eventDate} at{' '}
                   {posts[meetup.postId].eventTime}
                 </p>
               )}
-              <p className="meetup-date">
+              <p className={styles.meetupDate}>
                 Joined: {new Date(meetup.joinedAt).toLocaleDateString()}
               </p>
             </li>

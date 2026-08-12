@@ -1,6 +1,6 @@
 import React from 'react';
 import { get } from '../utils/api.js';
-import './Board.css';
+import styles from './Board.module.css';
 import PropTypes from 'prop-types';
 
 function Board(props) {
@@ -13,13 +13,13 @@ function Board(props) {
   }, []);
 
   return (
-    <div className="board">
+    <div className={styles.board}>
       <h2>Orbit Board</h2>
       {posts.map(function (post) {
         return (
-          <div
+          <button
             key={post._id}
-            className="post-card"
+            className={styles.postCard}
             onClick={function () {
               props.onSelectPost(post._id);
             }}
@@ -28,7 +28,7 @@ function Board(props) {
             <p>
               {post.category} - {post.eventDate} at {post.eventTime}
             </p>
-          </div>
+          </button>
         );
       })}
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { post } from '../utils/api.js';
-import './IAmIn.css';
+import styles from './IAmIn.module.css';
 import PropTypes from 'prop-types';
 
 function IAmIn(props) {
@@ -30,21 +30,24 @@ function IAmIn(props) {
 
   if (joined === true) {
     return (
-      <div className="iam-in">
-        <button className="iam-in-btn iam-in-btn--joined" disabled>
+      <div className={styles.iamIn}>
+        <button
+          className={`${styles.iamInBtn} ${styles.iamInBtnJoined}`}
+          disabled
+        >
           You are in
         </button>
-        <p className="iam-in-msg">{message}</p>
+        <p className={styles.iamInMsg}>{message}</p>
       </div>
     );
   }
 
   return (
-    <div className="iam-in">
-      <button className="iam-in-btn" onClick={handleClick}>
+    <div className={styles.iamIn}>
+      <button className={styles.iamInBtn} onClick={handleClick}>
         I am in
       </button>
-      {message !== '' && <p className="iam-in-msg">{message}</p>}
+      {message !== '' && <p className={styles.iamInMsg}>{message}</p>}
     </div>
   );
 }
