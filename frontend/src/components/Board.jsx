@@ -15,6 +15,10 @@ function Board(props) {
   return (
     <div className={styles.board}>
       <h2>Orbit Board</h2>
+      <p className={styles.instructions}>
+        Browse local events below. Click an event to see details, RSVP, and
+        comment. Log in to post your own event.
+      </p>
       {posts.map(function (post) {
         return (
           <button
