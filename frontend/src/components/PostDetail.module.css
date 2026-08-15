@@ -1,28 +1,28 @@
-.post-detail {
+.postDetail {
   max-width: 700px;
   margin: 24px auto;
   padding: 0 24px;
 }
 
-.post-detail h2 {
+.postDetail h2 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-.post-detail p {
+.postDetail p {
   font-size: 14px;
   color: #4a4a6a;
   margin-bottom: 8px;
 }
 
-.comment-list {
+.commentList {
   list-style: none;
   padding: 0;
   margin-top: 12px;
 }
 
-.comment-item {
+.commentItem {
   background: #ffffff;
   border: 1px solid #d0d4ff;
   border-radius: 6px;
@@ -32,24 +32,24 @@
   box-shadow: 0 2px 6px rgba(108, 99, 255, 0.06);
 }
 
-.comment-item strong {
+.commentItem strong {
   margin-right: 6px;
 }
 
-.comment-form {
+.commentForm {
   display: flex;
   gap: 8px;
   margin-top: 16px;
 }
 
-.comment-form input {
+.commentForm input {
   flex: 1;
   padding: 8px;
   border: 1px solid #d0d4ff;
   border-radius: 6px;
 }
 
-.comment-form button {
+.commentForm button {
   padding: 8px 16px;
   background-color: #ffffff;
   border: 1px solid #6c63ff;
