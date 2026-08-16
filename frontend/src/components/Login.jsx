@@ -65,8 +65,9 @@ function Login(props) {
       <h2>{modeText}</h2>
 
       <form onSubmit={handleSubmit} className={styles.loginForm}>
-        <label className={styles.loginLabel}>Username</label>
+        <label className={styles.loginLabel} htmlFor="username">Username</label>
         <input
+          id="username"
           type="text"
           className={styles.loginInput}
           value={username}
@@ -76,8 +77,9 @@ function Login(props) {
           required
         />
 
-        <label className={styles.loginLabel}>Password</label>
+        <label className={styles.loginLabel} htmlFor="password">Password</label>
         <input
+          id="password"
           type="password"
           className={styles.loginInput}
           value={password}

@@ -15,6 +15,9 @@ function PostDetail(props) {
     function () {
       if (!postId) return;
 
+      setPostData(null);
+      setComments([]);
+
       get('/api/posts/' + postId).then(function (data) {
         setPostData(data);
       });
@@ -63,8 +66,12 @@ function PostDetail(props) {
       </ul>
 
       <form onSubmit={handleCommentSubmit} className={styles.commentForm}>
+        <label htmlFor="commentText" className={styles.srOnly}>
+          Add a comment
+        </label>
         <input
           type="text"
+          id="commentText"
           value={commentText}
           onChange={function (e) {
             setCommentText(e.target.value);

@@ -37,9 +37,12 @@ function PostForm(props) {
   return (
     <form className={styles.postForm} onSubmit={handleSubmit}>
 
-      <label>Title</label>
+    <h2>Create a Post</h2>
+
+    <label htmlFor="title">Title</label>
       <input
         type="text"
+        id="title"
         value={title}
         onChange={function (e) {
           setTitle(e.target.value);
@@ -47,17 +50,19 @@ function PostForm(props) {
         required
       />
 
-      <label>Description</label>
+      <label htmlFor="description">Description</label>
       <textarea
+        id="description"
         value={description}
         onChange={function (e) {
           setDescription(e.target.value);
         }}
         required
       />
-      <label>Category</label>
+      <label htmlFor="category">Category</label>
       <input
-        type="data"
+        type="text"
+        id="category"
         value={category}
         onChange={function (e) {
           setCategory(e.target.value);
@@ -65,9 +70,10 @@ function PostForm(props) {
         required
       />
 
-      <label>Date</label>
+      <label htmlFor="eventDate">Date</label>
       <input
         type="date"
+        id="eventDate"
         value={eventDate}
         onChange={function (e) {
           setEventDate(e.target.value);
@@ -75,9 +81,10 @@ function PostForm(props) {
         required
       />
 
-      <label>Time</label>
+      <label htmlFor="eventTime">Time</label>
       <input
         type="time"
+        id="eventTime"
         value={eventTime}
         onChange={function (e) {
           setEventTime(e.target.value);

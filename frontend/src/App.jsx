@@ -23,6 +23,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1>Orbit</h1>
       <nav className="navbar">
         <button
           onClick={function () {
