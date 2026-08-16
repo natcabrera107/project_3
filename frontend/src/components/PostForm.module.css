@@ -50,3 +50,13 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+.success-message {
+  background-color: #e6f9e9;
+  color: #dbc1da;
+  border: 1px solid #9f3fa8;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-weight: 600;
+  margin-top: 12px;
+}

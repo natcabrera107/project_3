@@ -12,7 +12,13 @@ function Board(props) {
     });
   }, []);
 
-  var sortedPosts = posts.slice().sort(function (a, b) {
+  var today = new Date().toISOString().slice(0, 10);
+
+  var sortedPosts = posts.
+    .filter(function (post) {
+      return post.eventDate >= today;
+    })
+    .sort(function (a, b) {
     if (a.eventDate < b.eventDate) {
       return -1;
     }
