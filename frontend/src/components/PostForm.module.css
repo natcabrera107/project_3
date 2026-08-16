@@ -38,6 +38,8 @@
 /* only textarea gets a taller default height and vertical resize handle */
 
 .post-form button {
+  -webkit-appearance: none;
+  appearance: none;
   margin-top: 20px;
   padding: 10px;
   background-color: #6c63ff;

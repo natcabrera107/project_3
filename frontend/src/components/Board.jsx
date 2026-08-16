@@ -12,6 +12,16 @@ function Board(props) {
     });
   }, []);
 
+  var sortedPosts = posts.slice().sort(function (a, b) {
+    if (a.eventDate < b.eventDate) {
+      return -1;
+    }
+    if (a.eventDate > b.eventDate) {
+      return 1;
+    }
+    return 0;
+  });
+
   return (
     <div className={styles.board}>
       <h2>Board</h2>
@@ -19,7 +29,7 @@ function Board(props) {
         Browse local events below. Click an event to see details, RSVP, and
         comment. Log in to post your own event.
       </p>
-      {posts.map(function (post) {
+      {sortedPosts.map(function (post) {
         return (
           <button
             key={post._id}

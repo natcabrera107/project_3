@@ -10,6 +10,8 @@ function PostForm(props) {
   var [eventDate, setEventDate] = React.useState('');
   var [eventTime, setEventTime] = React.useState('');
 
+  var [message, setMessage] = React.useState('');
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -27,6 +29,8 @@ function PostForm(props) {
       setCategory('');
       setEventDate('');
       setEventTime('');
+
+      setMessage('Post created!');
 
       if (props.onPostCreated) {
         props.onPostCreated(data);
@@ -91,6 +95,8 @@ function PostForm(props) {
         }}
         required
       />
+      
+      {message !== '' && <p>{message}</p>}
 
       <button type="submit">Create Post</button>
     </form>
