@@ -14,7 +14,7 @@ function Board(props) {
 
   var today = new Date().toISOString().slice(0, 10);
 
-  var sortedPosts = posts.
+  var sortedPosts = posts
     .filter(function (post) {
       return post.eventDate >= today;
     })
