@@ -19,14 +19,14 @@ function Board(props) {
       return post.eventDate >= today;
     })
     .sort(function (a, b) {
-    if (a.eventDate < b.eventDate) {
-      return -1;
-    }
-    if (a.eventDate > b.eventDate) {
-      return 1;
-    }
-    return 0;
-  });
+      if (a.eventDate < b.eventDate) {
+        return -1;
+      }
+      if (a.eventDate > b.eventDate) {
+        return 1;
+      }
+      return 0;
+    });
 
   return (
     <div className={styles.board}>

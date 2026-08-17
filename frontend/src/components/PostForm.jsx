@@ -1,6 +1,6 @@
 import React from 'react';
 import { post } from '../utils/api.js';
-import styles from "./PostForm.module.css";
+import styles from './PostForm.module.css';
 import PropTypes from 'prop-types';
 
 function PostForm(props) {
@@ -40,10 +40,9 @@ function PostForm(props) {
 
   return (
     <form className={styles.postForm} onSubmit={handleSubmit}>
+      <h2>Create a Post</h2>
 
-    <h2>Create a Post</h2>
-
-    <label htmlFor="title">Title</label>
+      <label htmlFor="title">Title</label>
       <input
         type="text"
         id="title"
@@ -95,8 +94,8 @@ function PostForm(props) {
         }}
         required
       />
-      
-      {message !== '' && <p>{message}</p>}
+
+      {message !== '' && <p className={styles.successMessage}>{message}</p>}
 
       <button type="submit">Create Post</button>
     </form>

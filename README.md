@@ -10,7 +10,7 @@ Nathalie Cabrera and Alex Perkins
 
 ## Youtube/video link
 
-[cs5610project3](https://www.youtube.com/watch?v=NklyXs0YQKQ)
+[cs5610FinalProject](https://www.youtube.com/watch?v=NklyXs0YQKQ)
 
 ## Project Objective
 

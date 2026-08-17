@@ -24,7 +24,7 @@ function Login(props) {
   function handleSubmit(e) {
     e.preventDefault();
 
-if (isSignup === true) {
+    if (isSignup === true) {
       post('/api/auth/signup', { username: username, password: password }).then(
         function (data) {
           if (data.message === 'Username is already taken') {
@@ -65,36 +65,40 @@ if (isSignup === true) {
       <h2>{modeText}</h2>
 
       {showContinue === false && (
-      <form onSubmit={handleSubmit} className={styles.loginForm}>
-        <label className={styles.loginLabel} htmlFor="username">Username</label>
-        <input
-          id="username"
-          type="text"
-          className={styles.loginInput}
-          value={username}
-          onChange={function (e) {
-            setUsername(e.target.value);
-          }}
-          required
-        />
+        <form onSubmit={handleSubmit} className={styles.loginForm}>
+          <label className={styles.loginLabel} htmlFor="username">
+            Username
+          </label>
+          <input
+            id="username"
+            type="text"
+            className={styles.loginInput}
+            value={username}
+            onChange={function (e) {
+              setUsername(e.target.value);
+            }}
+            required
+          />
 
-        <label className={styles.loginLabel} htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          className={styles.loginInput}
-          value={password}
-          onChange={function (e) {
-            setPassword(e.target.value);
-          }}
-          required
-        />
+          <label className={styles.loginLabel} htmlFor="password">
+            Password
+          </label>
+          <input
+            id="password"
+            type="password"
+            className={styles.loginInput}
+            value={password}
+            onChange={function (e) {
+              setPassword(e.target.value);
+            }}
+            required
+          />
 
-        <button type="submit" className={styles.loginBtn}>
-          {modeText}
-        </button>
-      </form>
-    )}
+          <button type="submit" className={styles.loginBtn}>
+            {modeText}
+          </button>
+        </form>
+      )}
 
       {message !== '' && <p className={styles.loginMessage}>{message}</p>}
       {showContinue === true && (

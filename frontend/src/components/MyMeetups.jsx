@@ -54,7 +54,9 @@ function MyMeetups(props) {
           return (
             <li key={meetup._id} className={styles.meetupItem}>
               {posts[meetup.postId] && (
-                <p className={styles.meetupTitle}>{posts[meetup.postId].title}</p>
+                <p className={styles.meetupTitle}>
+                  {posts[meetup.postId].title}
+                </p>
               )}
               {posts[meetup.postId] && (
                 <p className={styles.meetupEventDate}>

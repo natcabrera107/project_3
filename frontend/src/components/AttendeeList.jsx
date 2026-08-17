@@ -22,7 +22,9 @@ function AttendeeList(props) {
   if (attendees.length === 0) {
     return (
       <div className={styles.attendeeList}>
-        <p className={styles.attendeeEmpty}>No one has joined yet. Be the first!</p>
+        <p className={styles.attendeeEmpty}>
+          No one has joined yet. Be the first!
+        </p>
       </div>
     );
   }
