@@ -12,7 +12,7 @@ function Board(props) {
     });
   }, []);
 
-  var today = new Date().toISOString().slice(0, 10);
+  var today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 
   var sortedPosts = posts
     .filter(function (post) {
